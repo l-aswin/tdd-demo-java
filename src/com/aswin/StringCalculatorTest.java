@@ -7,26 +7,32 @@ public class StringCalculatorTest {
 
     String msgFailed=" test case failed";
     @Test
-    public void addEmptyInputString(){
+    public void addInputEmptyString(){
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(0,stringCalculator.add(""),"addEmptyInputString"+msgFailed);
+        assertEquals(0,stringCalculator.add(""),"addInputEmptyString"+msgFailed);
     }
 
     @Test
-    public void addOneInputString(){
+    public void addInputLengthOne(){
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(1,stringCalculator.add("1"),"addOneInputString"+msgFailed);
+        assertEquals(1,stringCalculator.add("1"),"addInputLengthOne"+msgFailed);
     }
 
     @Test
-    public void addTwoInputString(){
+    public void addInputLengthTwo(){
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(3,stringCalculator.add("1,2"),"addTwoInputString"+msgFailed);
+        assertEquals(3,stringCalculator.add("1,2"),"addInputLengthTwo"+msgFailed);
     }
 
     @Test
-    public void addUnknownInput(){
+    public void addInputLengthUnknown(){
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(120,stringCalculator.add("1,2,8,9,67,33"),"addUnknownInput"+msgFailed);
+        assertEquals(120,stringCalculator.add("1,2,8,9,67,33"),"addInputLengthUnknown"+msgFailed);
+    }
+
+    @Test
+    public void addInputWithNewline(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(6,stringCalculator.add("1\n2,3"),"addInputWithNewline"+msgFailed);
     }
 }
