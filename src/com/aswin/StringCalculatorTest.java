@@ -57,9 +57,15 @@ public class StringCalculatorTest {
     }
 
     @Test
+    public void addIgnoreHighNumber() throws NegativeInputException{
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(2,stringCalculator.add("2,1001"),"Ignore number>1000"+msgFailed);
+    }
+
+    @Test
     public void testGetCalledCount() {
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(8,stringCalculator.getCalledCount(),"testGetCalledCount"+msgFailed);
+        assertEquals(9,stringCalculator.getCalledCount(),"testGetCalledCount"+msgFailed);
     }
 
 }

@@ -15,15 +15,18 @@ public class StringCalculator {
             String[] numberArray = lines[1].split(delimiter);
             //iterate through array and calculate sum
             int sum = 0;
-            String negativesInInput="";
+            StringBuilder negativesInInput= new StringBuilder();
             for (String number : numberArray) {
                 if(Integer.parseInt(number)<0)
-                    negativesInInput += number+",";
-                else
-                    sum += Integer.parseInt(number);
+                    negativesInInput.append(number).append(",");
+                else {
+                    //ignore number if it is greater than 1000
+                    if(Integer.parseInt(number)<=1000)
+                        sum += Integer.parseInt(number);
+                }
             }
             //if input has negative number, throw exception
-            if(!negativesInInput.equals(""))
+            if(!negativesInInput.toString().equals(""))
                 throw new NegativeInputException("negatives not allowed " + negativesInInput);
             else
                 return sum;
@@ -34,15 +37,18 @@ public class StringCalculator {
             String[] numberArray = numbers.split("[,\n]");
             //iterate through array and calculate sum
             int sum = 0;
-            String negativesInInput="";
+            StringBuilder negativesInInput= new StringBuilder();
             for (String number : numberArray) {
                 if(Integer.parseInt(number)<0)
-                    negativesInInput += number+",";
-                else
-                    sum += Integer.parseInt(number);
+                    negativesInInput.append(number).append(",");
+                else {
+                    //ignore number if it is greater than 1000
+                    if(Integer.parseInt(number)<=1000)
+                        sum += Integer.parseInt(number);
+                }
             }
             //if input has negative number, throw exception
-            if(!negativesInInput.equals(""))
+            if(!negativesInInput.toString().equals(""))
                 throw new NegativeInputException("negatives not allowed " + negativesInInput);
             else
                 return sum;
