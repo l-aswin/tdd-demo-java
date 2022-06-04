@@ -1,7 +1,9 @@
 package com.aswin;
 
+import com.aswin.assertions.NegativeInputException;
+
 public class StringCalculator {
-    public int add(String numbers) {
+    public int add(String numbers) throws NegativeInputException {
         if (numbers.matches("//(.*)\n(.*)")) {
             //split user input into lines
             String[] lines = numbers.split("\n");
@@ -12,6 +14,9 @@ public class StringCalculator {
             //iterate through array and calculate sum
             int sum = 0;
             for (String number : numberArray) {
+                if(Integer.parseInt(number)<0)
+                    throw new NegativeInputException("negatives not allowed " + number);
+                else
                 sum += Integer.parseInt(number);
             }
             return sum;
@@ -23,7 +28,10 @@ public class StringCalculator {
             //iterate through array and calculate sum
             int sum = 0;
             for (String number : numberArray) {
-                sum += Integer.parseInt(number);
+                if(Integer.parseInt(number)<0)
+                    throw new NegativeInputException("negatives not allowed " + number);
+                else
+                    sum += Integer.parseInt(number);
             }
             return sum;
         }
