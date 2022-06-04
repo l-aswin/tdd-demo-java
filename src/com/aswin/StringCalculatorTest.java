@@ -1,11 +1,12 @@
 package com.aswin;
 
 import com.aswin.assertions.NegativeInputException;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+@TestMethodOrder(MethodOrderer.MethodName.class)
 public class StringCalculatorTest {
-
     String msgFailed=" test case failed";
     @Test
     public void addInputEmptyString() throws NegativeInputException {
@@ -53,6 +54,12 @@ public class StringCalculatorTest {
     public void addDisallowNegative() throws NegativeInputException {
         StringCalculator stringCalculator = new StringCalculator();
         stringCalculator.add("-1\n-2,4,5,-6,7");
+    }
+
+    @Test
+    public void testGetCalledCount() {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(8,stringCalculator.getCalledCount(),"testGetCalledCount"+msgFailed);
     }
 
 }

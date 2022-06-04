@@ -3,7 +3,9 @@ package com.aswin;
 import com.aswin.assertions.NegativeInputException;
 
 public class StringCalculator {
+    private static int countAddMethodCall=0;
     public int add(String numbers) throws NegativeInputException {
+        countAddMethodCall++;
         if (numbers.matches("//(.*)\n(.*)")) {
             //split user input into lines
             String[] lines = numbers.split("\n");
@@ -47,4 +49,7 @@ public class StringCalculator {
         }
     }
 
+    public int getCalledCount() {
+        return countAddMethodCall;
+    }
 }
