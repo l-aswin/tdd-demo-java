@@ -46,13 +46,13 @@ public class StringCalculatorTest {
     @Test
     public void addDisallowNegativeDifferentDelimiter() throws NegativeInputException {
         StringCalculator stringCalculator = new StringCalculator();
-        stringCalculator.add("//;\n-1;2");
+        stringCalculator.add("//;\n-1;2;-3;4");
     }
 
     @Test
     public void addDisallowNegative() throws NegativeInputException {
         StringCalculator stringCalculator = new StringCalculator();
-        stringCalculator.add("1,-2,4");
+        stringCalculator.add("-1\n-2,4,5,-6,7");
     }
 
 }

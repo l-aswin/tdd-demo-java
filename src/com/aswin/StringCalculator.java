@@ -13,13 +13,18 @@ public class StringCalculator {
             String[] numberArray = lines[1].split(delimiter);
             //iterate through array and calculate sum
             int sum = 0;
+            String negativesInInput="";
             for (String number : numberArray) {
                 if(Integer.parseInt(number)<0)
-                    throw new NegativeInputException("negatives not allowed " + number);
+                    negativesInInput += number+",";
                 else
-                sum += Integer.parseInt(number);
+                    sum += Integer.parseInt(number);
             }
-            return sum;
+            //if input has negative number, throw exception
+            if(!negativesInInput.equals(""))
+                throw new NegativeInputException("negatives not allowed " + negativesInInput);
+            else
+                return sum;
         } else if (numbers.equals(""))
             return 0;
         else {
@@ -27,13 +32,18 @@ public class StringCalculator {
             String[] numberArray = numbers.split("[,\n]");
             //iterate through array and calculate sum
             int sum = 0;
+            String negativesInInput="";
             for (String number : numberArray) {
                 if(Integer.parseInt(number)<0)
-                    throw new NegativeInputException("negatives not allowed " + number);
+                    negativesInInput += number+",";
                 else
                     sum += Integer.parseInt(number);
             }
-            return sum;
+            //if input has negative number, throw exception
+            if(!negativesInInput.equals(""))
+                throw new NegativeInputException("negatives not allowed " + negativesInInput);
+            else
+                return sum;
         }
     }
 
