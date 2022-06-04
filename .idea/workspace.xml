@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2bb145c3-abac-4722-ac49-a46f3bc45d52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/aswin/StringCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/aswin/StringCalculatorTest.java" afterDir="false" />
+    <list default="true" id="2bb145c3-abac-4722-ac49-a46f3bc45d52" name="Changes" comment="implemented add method to accept unknown amount of numbers and return sum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aswin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aswin/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tdd-demo-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tdd-demo-java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/aswin/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aswin/StringCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/aswin/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aswin/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +78,14 @@
       <option name="presentableId" value="Default" />
       <updated>1654350378554</updated>
     </task>
+    <task id="LOCAL-00001" summary="implemented add method to accept 0,1 or 2 numbers and&#10;return sum">
+      <created>1654352449567</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654352449567</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,5 +98,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implemented add method to accept 0,1 or 2 numbers and&#10;return sum" />
+    <MESSAGE value="implemented add method to accept unknown amount of numbers and return sum" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented add method to accept unknown amount of numbers and return sum" />
   </component>
 </project>
