@@ -35,4 +35,10 @@ public class StringCalculatorTest {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(6,stringCalculator.add("1\n2,3"),"addInputWithNewline"+msgFailed);
     }
+
+    @Test
+    public void addSupportDifferentDelimiters(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(3,stringCalculator.add("//;\n1;2"),"addSupportDifferentDelimiters"+msgFailed);
+    }
 }
