@@ -9,10 +9,25 @@ public class StringCalculator {
         if (numbers.matches("//(.*)\n(.*)")) {
             //split user input into lines
             String[] lines = numbers.split("\n");
+
             //extract delimiter from first line
-            String delimiter = lines[0].replaceFirst("//", "");
+            String delimiterUserInput = lines[0].replaceFirst("//", "").replace("[","").replace("]","");
+
+            //add escape sequence to delimiter,if it has reserved symbols
+            String specialCharacters = "\\.[]{}()<>*+-=!?^$|";
+            StringBuilder delimiter= new StringBuilder();
+            char[] delimiterArray = delimiterUserInput.toCharArray();
+            for(int i=0;i<delimiterArray.length;i++){
+                if( specialCharacters.contains(String.valueOf(delimiterArray[i])) ){
+                    delimiter.append("\\").append(delimiterArray[i]);
+                }else {
+                    delimiter.append(delimiterArray[i]);
+                }
+            }
+
             //extract numbers from line 2
-            String[] numberArray = lines[1].split(delimiter);
+            String[] numberArray = lines[1].split(delimiter.toString());
+
             //iterate through array and calculate sum
             int sum = 0;
             StringBuilder negativesInInput= new StringBuilder();
@@ -25,6 +40,7 @@ public class StringCalculator {
                         sum += Integer.parseInt(number);
                 }
             }
+
             //if input has negative number, throw exception
             if(!negativesInInput.toString().equals(""))
                 throw new NegativeInputException("negatives not allowed " + negativesInInput);

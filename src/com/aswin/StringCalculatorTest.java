@@ -63,9 +63,16 @@ public class StringCalculatorTest {
     }
 
     @Test
+    public void addDelimiterStringLengthNoLimit() throws NegativeInputException{
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(10, stringCalculator.add("//[***]\n1***2***3***4"),"addDelimiterStringLengthNoLimit"+msgFailed);
+
+    }
+
+    @Test
     public void testGetCalledCount() {
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(9,stringCalculator.getCalledCount(),"testGetCalledCount"+msgFailed);
+        assertEquals(10,stringCalculator.getCalledCount(),"testGetCalledCount"+msgFailed);
     }
 
 }
