@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bb145c3-abac-4722-ac49-a46f3bc45d52" name="Changes" comment="modified add method to allow multiple delimiters given in add method argument">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aswin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aswin/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/aswin/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aswin/StringCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/aswin/StringCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aswin/StringCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654376944932</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="modified add method to allow multiple delimiters given in add method argument">
+      <created>1654392704604</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654392704604</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

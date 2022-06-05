@@ -70,15 +70,21 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void addUserInputMultipleDelimiter() throws NegativeInputException {
+    public void addMultipleDelimiter() throws NegativeInputException {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(13, stringCalculator.add("//[*][%]\n8*2%3"), "addUserInputMultipleDelimiter" + msgFailed);
     }
 
     @Test
+    public void addMultipleDelimiterWithLengthNoLimit() throws NegativeInputException {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(8, stringCalculator.add("//[**][%%]\n1**2%%3**2"), "addUserInputMultipleDelimiter" + msgFailed);
+    }
+
+    @Test
     public void testGetCalledCount() {
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(11, stringCalculator.getCalledCount(), "testGetCalledCount" + msgFailed);
+        assertEquals(12, stringCalculator.getCalledCount(), "testGetCalledCount" + msgFailed);
     }
 
 }
