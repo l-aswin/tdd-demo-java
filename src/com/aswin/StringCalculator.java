@@ -5,6 +5,7 @@ import com.aswin.assertions.NegativeInputException;
 import java.util.regex.Pattern;
 
 public class StringCalculator {
+//variable initialization
     private static int countAddMethodCall = 0;
 
     public int add(String numbers) throws NegativeInputException {
